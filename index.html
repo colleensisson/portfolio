@@ -292,11 +292,11 @@
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
-            <p class="title"><a class="open" href="bf-25-promo-page.html" target="_blank" rel="noopener">Promo page</a></p>
-            <p class="file">bf-25-promo-page.html</p>
+            <p class="title"><a class="open" href="bf-25-promo.html" target="_blank" rel="noopener">Promo page</a></p>
+            <p class="file">bf-25-promo.html</p>
           </div>
           <div class="actions">
-            <button class="btn" data-copy="bf-25-promo-page.html">Copy link</button>
+            <button class="btn" data-copy="bf-25-promo.html">Copy link</button>
           </div>
         </li>
       </ul>
@@ -339,7 +339,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Copy full URL (works on GitHub Pages)
     function fullUrl(path){
       try { return new URL(path, window.location.href).href; }
       catch(e){ return path; }
@@ -357,7 +356,6 @@
         btn.textContent = "Copied";
         setTimeout(()=>btn.textContent = old, 900);
       }catch(err){
-        // fallback: prompt
         window.prompt("Copy this URL:", url);
       }
     });
