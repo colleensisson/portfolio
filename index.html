@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Colleen Sisson — Portfolio</title>
-  <meta name="description" content="Email portfolio by Colleen Sisson."/>
+  <title>Colleen Sisson — Email Index</title>
+  <meta name="description" content="Email portfolio index by Colleen Sisson."/>
 
-  <!-- Headings: Lato; Body/UI: Lucida stack -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap" rel="stylesheet"/>
 
   <style>
     :root{
-      --bg:#ffffff; --ink:#151515; --muted:#6f6f6f; --rule:#e8e8e8; --turq:#3fc2c2; --max:1080px;
-      --fs-xxs:11.5px; --fs-xs:13px; --fs-s:15px; --fs-m:18px; --fs-l:20px; --fs-xl:34px;
+      --bg:#ffffff; --ink:#151515; --muted:#6f6f6f; --rule:#e8e8e8; --turq:#3fc2c2; --max:980px;
+      --fs-xs:13px; --fs-s:15px; --fs-m:18px; --fs-xl:34px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -21,474 +20,347 @@
       font:16px/1.6 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,Arial,sans-serif;
       -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    a{color:inherit; text-decoration:none}
-    [hidden]{display:none!important}
-    img{display:block; max-width:100%}
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:36px 20px 72px}
 
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 80px}
-
-    /* Header */
-    header{
-      position:sticky; top:0; z-index:30;
-      background:rgba(255,255,255,.92);
-      padding:36px 0 22px;
-      border-bottom:1px solid var(--rule);
-      display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
-      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-    }
-    .brand h1{
-      margin:0; font-weight:600; letter-spacing:-.2px; font-size:var(--fs-xl); line-height:1.2;
+    header{padding:10px 0 22px; border-bottom:1px solid var(--rule)}
+    h1{
+      margin:0;
+      font-weight:600;
+      letter-spacing:-.2px;
+      font-size:var(--fs-xl);
+      line-height:1.1;
       font-family:"Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
     }
-    .brand .tagline{
-      margin:6px 0 0;
-      font-size:var(--fs-s);
-      color:var(--muted);
-      max-width:440px;
-    }
-    .meta-nav{font-size:var(--fs-xs); color:var(--muted); display:flex; gap:8px; flex-wrap:wrap}
-    .meta-nav button{
-      padding:6px 10px; border:1px solid var(--rule); border-radius:999px; background:#fff; cursor:pointer;
-      font:inherit; color:inherit;
-    }
-    .meta-nav .current{border-color:#cfd7d7; box-shadow:0 0 0 2px rgba(0,0,0,.03)}
+    .tagline{margin:10px 0 0; color:var(--muted); font-size:var(--fs-s); max-width:720px}
 
-    /* Sections */
-    section{padding:30px 0}
-    .section-head{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px}
-    .section-title{font-size:var(--fs-s); color:#333; letter-spacing:.02em; font-family:"Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif; font-weight:600}
-    .rule{border-top:1px solid var(--rule); margin-top:16px}
-
-    /* Grid/cards */
-    .grid{display:grid; gap:22px; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); align-items:start}
-    figure{margin:0; display:flex; flex-direction:column; gap:10px}
-    .thumb{
-      width:100%; aspect-ratio:16/10; object-fit:cover;
-      border:1px solid var(--rule); border-radius:10px; background:#f7f7f7;
-      transition:transform .15s ease, filter .15s ease
+    section{padding:26px 0; border-bottom:1px solid var(--rule)}
+    .section-title{
+      font-family:"Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+      font-weight:600;
+      font-size:var(--fs-m);
+      margin:0 0 12px;
+      letter-spacing:.01em;
     }
-    a:hover .thumb{transform:translateY(-2px); filter:saturate(1.02)}
 
-    /* Caption */
-    figcaption{display:flex; align-items:center}
-    .capline{display:flex; align-items:center; gap:8px; min-width:0; flex:1 1 auto}
-    .amulet{
-      flex:0 0 8px; width:8px; height:8px; border-radius:50%;
-      background:var(--turq); box-shadow:0 0 0 3px rgba(63,194,194,.12); cursor:pointer
+    .list{display:flex; flex-direction:column; gap:10px; margin:0; padding:0; list-style:none}
+    .row{
+      display:flex; gap:12px; align-items:center;
+      padding:10px 12px;
+      border:1px solid var(--rule);
+      border-radius:12px;
     }
+    .dot{
+      width:8px; height:8px; border-radius:50%;
+      background:var(--turq);
+      box-shadow:0 0 0 4px rgba(63,194,194,.12);
+      flex:0 0 auto;
+    }
+    .meta{min-width:0; flex:1 1 auto}
     .title{
-      margin:0; font-size:var(--fs-l); line-height:1.3; font-weight:600;
+      margin:0;
       font-family:"Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;
+      font-weight:600;
+      font-size:16px;
+      line-height:1.2;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
-    .subtitle{font-size:var(--fs-xs); color:var(--muted); letter-spacing:.02em}
+    .file{
+      margin:2px 0 0;
+      color:var(--muted);
+      font-size:var(--fs-xs);
+      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    .actions{display:flex; gap:8px; flex:0 0 auto}
+    .btn{
+      font-size:var(--fs-xs);
+      padding:8px 10px;
+      border:1px solid var(--rule);
+      border-radius:10px;
+      background:#fff;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{border-color:#cfd7d7}
+    .open{
+      border-color:var(--ink);
+      text-decoration:none;
+    }
 
     footer{
-      border-top:1px solid var(--rule);
-      margin-top:40px;
-      padding:18px 0;
-      font-size:var(--fs-xs);
+      padding-top:18px;
       color:var(--muted);
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap
+      font-size:var(--fs-xs);
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
     }
-
-    /* Modal */
-    .modal{position:fixed; inset:0; display:none; place-items:center; background:rgba(10,10,10,.66); z-index:50}
-    .modal.open{display:grid}
-    .panel{width:min(1000px,92vw); height:min(86vh,900px); background:#fff; border-radius:12px; overflow:hidden; display:flex; flex-direction:column; border:1px solid var(--rule)}
-    .panel header{display:flex; align-items:center; gap:10px; padding:10px 12px; border-bottom:1px solid var(--rule)}
-    .panel .h{font-weight:600; font-size:var(--fs-s); font-family:"Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif}
-    .panel .c{font-size:var(--fs-xs); color:var(--muted)}
-    .x{margin-left:auto; font-size:var(--fs-xs); padding:6px 10px; border:1px solid var(--rule); border-radius:8px; background:#fff; cursor:pointer}
-    .frame{flex:1 1 auto; position:relative; background:#000}
-    iframe{border:0; width:100%; height:100%; background:#fff}
-    .imgview{position:absolute; inset:0; display:none; background:#000; padding:0}
-    .imgview img{width:100%; height:100%; object-fit:contain}
-    .actions{border-top:1px solid var(--rule); padding:10px 12px; display:flex; justify-content:flex-end; gap:8px}
-    .btn{font-size:var(--fs-s); padding:8px 12px; border:1px solid var(--ink); border-radius:9px; background:#fff; cursor:pointer; text-decoration:none}
-
-    /* Web & Brand */
-    #webbrand-section .grid{grid-template-columns:1fr;}
-    .project-duo .thumb-row{display:grid; gap:16px; grid-template-columns:1.1fr .9fr;}
-    @media (max-width:760px){.project-duo .thumb-row{grid-template-columns:1fr; gap:12px;}}
-    .muted-note{font-size:var(--fs-xxs); color:var(--muted)}
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <h1>Colleen Sisson</h1>
-        <p class="tagline">Creative marketing designer focused on email, lifecycle, and product-led campaigns for ecommerce and wellness brands.</p>
-      </div>
-      <nav class="meta-nav" aria-label="Sections">
-        <button id="nav-email" class="current" type="button">Email design</button>
-        <button id="nav-web" type="button">Web &amp; brand design</button>
-      </nav>
+      <h1>Colleen Sisson</h1>
+      <p class="tagline">
+        Email portfolio index — one place with clean HTML links you can share or plug into Framer.
+      </p>
     </header>
 
-    <!-- ================= EMAIL COLLECTION ================= -->
-    <main id="email-sections">
-
-      <!-- New Drop -->
-      <section id="new-drop">
-        <div class="section-head"><div class="section-title">New Drop</div></div>
-        <div class="grid">
-          <figure data-cat="New Drop">
-            <a href="ocuwave-drop.html" data-title="Meet OcuWave">
-              <img class="thumb" src="./ocuwave-drop.png" alt="Meet OcuWave">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="ocuwave-drop.html"></span>
-                <h3 class="title">Meet OcuWave</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Product launch email introducing the OcuWave eye massager with calm, device-first imagery.</div>
-          </figure>
-        </div>
-        <div class="rule"></div>
-      </section>
-
-      <!-- Labor Day -->
-      <section id="labor-day">
-        <div class="section-head"><div class="section-title">Labor Day</div></div>
-        <div class="grid">
-          <figure data-cat="Labor Day">
-            <a href="laborday-e1.html" data-title="Less labor for your body">
-              <img class="thumb" src="./laborday-e1.png" alt="Labor Day — Less labor for your body">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="laborday-e1.html"></span>
-                <h3 class="title">Labor Day → Less labor for your body</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Labor Day campaign that reframes recovery as “less labor” on the body with close-up product-in-use shots.</div>
-          </figure>
-        </div>
-        <div class="rule"></div>
-      </section>
-
-      <!-- Father’s Day -->
-      <section id="fathers-day">
-        <div class="section-head"><div class="section-title">Father’s Day</div></div>
-        <div class="grid">
-          <figure data-cat="Father’s Day">
-            <a href="fathers-day-e2.html" data-title="Gear that supports the gear">
-              <img class="thumb" src="./fathers-day-e2.png" alt="Gear that supports the gear">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="fathers-day-e2.html"></span>
-                <h3 class="title">Gear that supports the gear</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Father’s Day email positioning wraps and add-ons as “gear that supports the gear” for practical gifting.</div>
-          </figure>
-
-          <figure data-cat="Father’s Day">
-            <a href="all-in-the-kit-fday-e4.html" data-title="It’s all in the Kit">
-              <img class="thumb" src="./all-in-the-kit-fday-e4.png" alt="It's all in the Kit">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="all-in-the-kit-fday-e4.html"></span>
-                <h3 class="title">It’s all in the Kit</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Follow-up campaign highlighting fully built kits and bundles to make gift decisions effortless.</div>
-          </figure>
-        </div>
-        <div class="rule"></div>
-      </section>
-
-      <!-- Foot Health Month -->
-      <section id="foot-health">
-        <div class="section-head"><div class="section-title">Foot Health Month</div></div>
-        <div class="grid">
-          <figure data-cat="Foot Health Month">
-            <a href="foot-health-2.html" data-title="Full-foot calm">
-              <img class="thumb" src="./foot-health-2.png" alt="Full-foot calm">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="foot-health-2.html"></span>
-                <h3 class="title">Full-foot calm</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Educational Foot Health Month email that pairs anatomy-led copy with grounded, calming visuals.</div>
-          </figure>
-
-          <figure data-cat="Foot Health Month">
-            <a href="foot-health-4.html" data-title="Footnotes">
-              <img class="thumb" src="./foot-health-4.png" alt="Footnotes">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="foot-health-4.html"></span>
-                <h3 class="title">Footnotes</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Story-driven follow-up that breaks down small “footnote” habits to keep people moving with less pain.</div>
-          </figure>
-        </div>
-        <div class="rule"></div>
-      </section>
-
-      <!-- Seasonal -->
-      <section id="seasonal">
-        <div class="section-head"><div class="section-title">Seasonal</div></div>
-        <div class="grid">
-          <figure data-cat="Seasonal">
-            <a href="october-reset.html" data-title="October reset">
-              <img class="thumb" src="./october-reset.png" alt="October reset">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="october-reset.html"></span>
-                <h3 class="title">October reset</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Early Q4 “reset” campaign that positions devices as part of a clean slate before holiday chaos hits.</div>
-          </figure>
-
-          <figure data-cat="Seasonal">
-            <a href="fall-bogo.html" data-title="Fall BOGO">
-              <img class="thumb" src="./fall-bogo.png" alt="Fall BOGO">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="fall-bogo.html"></span>
-                <h3 class="title">Fall BOGO</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Seasonal BOGO promotion designed to drive repeat purchases and move core devices ahead of peak season.</div>
-          </figure>
-
-          <figure data-cat="Seasonal">
-            <a href="extra-glo-extra-off.html" data-title="Extra off. Extra glo.">
-              <img class="thumb" src="./extra-glo-extra-off.png" alt="Extra off. Extra glo.">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="extra-glo-extra-off.html"></span>
-                <h3 class="title">Extra off. Extra glo.</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Offer-led campaign that pairs deeper discounts with softer skincare and recovery imagery for a “glo” story.</div>
-          </figure>
-        </div>
-        <div class="rule"></div>
-      </section>
-
-      <!-- Black Friday -->
-      <section id="black-friday">
-        <div class="section-head"><div class="section-title">Black Friday</div></div>
-        <div class="grid">
-          <figure data-cat="Black Friday">
-            <a href="blkfri-55-off-wraps.html" data-title="Wraps">
-              <img class="thumb" src="./blkfri-55-off-wraps.png" alt="Wraps">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="blkfri-55-off-wraps.html"></span>
-                <h3 class="title">Wraps</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Black Friday spotlight on wraps and accessories to lift average order value alongside core devices.</div>
-          </figure>
-
-          <figure data-cat="Black Friday">
-            <a href="blkfri-70-off-devices.html" data-title="Black Friday">
-              <img class="thumb" src="./blkfri-70-off-devices.png" alt="Black Friday">
-            </a>
-            <figcaption>
-              <div class="capline">
-                <span class="amulet" data-href="blkfri-70-off-devices.html"></span>
-                <h3 class="title">Black Friday</h3>
-              </div>
-            </figcaption>
-            <div class="subtitle">Primary Black Friday device campaign anchoring the steepest discount of the year on flagship products.</div>
-          </figure>
-        </div>
-        <div class="rule"></div>
-      </section>
-    </main>
-
-    <!-- ================ WEB & BRAND (single project) ================ -->
-    <section id="webbrand-section" hidden>
-      <div class="section-head"><div class="section-title">Web &amp; brand design</div></div>
-
-      <div class="grid">
-        <figure class="project-duo" data-cat="Web • Brand • UX">
-          <div class="thumb-row">
-            <!-- No external links; clicking opens BIG image in modal -->
-            <a href="./thp-mobile-web.png" data-title="The Healing Path — mobile view">
-              <img class="thumb" src="./thp-mobile-web.png" alt="The Healing Path — mobile view">
-            </a>
-            <a href="./thp-dsktp-web.png" data-title="The Healing Path — desktop view">
-              <img class="thumb" src="./thp-dsktp-web.png" alt="The Healing Path — desktop view">
-            </a>
+    <!-- NEW DROP -->
+    <section>
+      <h2 class="section-title">New Drop</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="ocuwave-drop.html" target="_blank" rel="noopener">Meet OcuWave</a></p>
+            <p class="file">ocuwave-drop.html</p>
           </div>
+          <div class="actions">
+            <button class="btn" data-copy="ocuwave-drop.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-          <figcaption>
-            <div class="capline">
-              <!-- Amulet opens the desktop image large -->
-              <span class="amulet" data-href="./thp-dsktp-web.png" aria-label="Open large preview"></span>
-              <h3 class="title">The Healing Path — brand &amp; website</h3>
-            </div>
-          </figcaption>
+    <!-- LABOR DAY -->
+    <section>
+      <h2 class="section-title">Labor Day</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="laborday-e1.html" target="_blank" rel="noopener">Less labor for your body</a></p>
+            <p class="file">laborday-e1.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="laborday-e1.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-          <div class="subtitle">Web • Brand • UX · Brand and website launch for a wellness studio, built on Wix with Mindbody integration.</div>
-          <div class="muted-note">Website temporarily offline — previews only</div>
-        </figure>
-      </div>
+    <!-- FATHER’S DAY -->
+    <section>
+      <h2 class="section-title">Father’s Day</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="fathers-day-e2.html" target="_blank" rel="noopener">Gear that supports the gear</a></p>
+            <p class="file">fathers-day-e2.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="fathers-day-e2.html">Copy link</button>
+          </div>
+        </li>
 
-      <div class="rule"></div>
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="fathers-day-e4.html" target="_blank" rel="noopener">It’s all in the Kit</a></p>
+            <p class="file">fathers-day-e4.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="fathers-day-e4.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FOOT HEALTH MONTH -->
+    <section>
+      <h2 class="section-title">Foot Health Month</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="foot-health-e2.html" target="_blank" rel="noopener">Full-foot calm</a></p>
+            <p class="file">foot-health-e2.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="foot-health-e2.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="foot-health-e4.html" target="_blank" rel="noopener">Footnotes</a></p>
+            <p class="file">foot-health-e4.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="foot-health-e4.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SEASONAL -->
+    <section>
+      <h2 class="section-title">Seasonal</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="october-reset.html" target="_blank" rel="noopener">October reset</a></p>
+            <p class="file">october-reset.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="october-reset.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="fall-bogo.html" target="_blank" rel="noopener">Fall BOGO</a></p>
+            <p class="file">fall-bogo.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="fall-bogo.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="extra-glo-extra-off.html" target="_blank" rel="noopener">Extra off. Extra glo.</a></p>
+            <p class="file">extra-glo-extra-off.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="extra-glo-extra-off.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- BLACK FRIDAY (2024) -->
+    <section>
+      <h2 class="section-title">Black Friday (2024)</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="bf-24-wraps.html" target="_blank" rel="noopener">Wraps</a></p>
+            <p class="file">bf-24-wraps.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="bf-24-wraps.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="bf-24-devices.html" target="_blank" rel="noopener">Devices</a></p>
+            <p class="file">bf-24-devices.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="bf-24-devices.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- BLACK FRIDAY (2025) -->
+    <section>
+      <h2 class="section-title">Black Friday (2025)</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="bf-25-e1.html" target="_blank" rel="noopener">Email 1</a></p>
+            <p class="file">bf-25-e1.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="bf-25-e1.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="bf-25-e4.html" target="_blank" rel="noopener">Email 4</a></p>
+            <p class="file">bf-25-e4.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="bf-25-e4.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="bf-25-promo-page.html" target="_blank" rel="noopener">Promo page</a></p>
+            <p class="file">bf-25-promo-page.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="bf-25-promo-page.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- NEWER EMAILS -->
+    <section>
+      <h2 class="section-title">Newer emails</h2>
+      <ul class="list">
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="hot-cold-packs.html" target="_blank" rel="noopener">Hot / Cold Packs</a></p>
+            <p class="file">hot-cold-packs.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="hot-cold-packs.html">Copy link</button>
+          </div>
+        </li>
+
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="magnesium-spray.html" target="_blank" rel="noopener">Magnesium Spray</a></p>
+            <p class="file">magnesium-spray.html</p>
+          </div>
+          <div class="actions">
+            <button class="btn" data-copy="magnesium-spray.html">Copy link</button>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <footer>
       <div>© <span id="year"></span> Colleen Sisson</div>
-      <div>Open to roles in email design, lifecycle, and product-led brand design.</div>
+      <div>These links point to the HTML files in this GitHub Pages repo.</div>
     </footer>
   </div>
 
-  <!-- Modal -->
-  <div class="modal" id="modal" aria-hidden="true" hidden>
-    <div class="panel" role="dialog" aria-modal="true">
-      <header>
-        <div class="h" id="m-title">Title</div>
-        <div class="c" id="m-cat">• Category</div>
-        <button class="x" id="m-close" aria-label="Close">Close</button>
-      </header>
-      <div class="frame">
-        <iframe id="m-frame" title="Preview"></iframe>
-        <div class="imgview" id="m-imgwrap"><img id="m-img" alt="Preview image"/></div>
-      </div>
-      <div class="actions">
-        <a id="m-open" class="btn" target="_blank" rel="noopener">Open full</a>
-      </div>
-    </div>
-  </div>
-
   <script>
-    (function(){
-      function safe(fn){ try{ fn(); } catch(e){ console && console.error && console.error(e); } }
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Modal elements
-      var modal  = document.getElementById('modal');
-      var mTitle = document.getElementById('m-title');
-      var mCat   = document.getElementById('m-cat');
-      var mFrame = document.getElementById('m-frame');
-      var mOpen  = document.getElementById('m-open');
-      var mClose = document.getElementById('m-close');
-      var mImgWrap = document.getElementById('m-imgwrap');
-      var mImg   = document.getElementById('m-img');
+    // Copy full URL (works on GitHub Pages)
+    function fullUrl(path){
+      try { return new URL(path, window.location.href).href; }
+      catch(e){ return path; }
+    }
 
-      function isImage(href){ return /\.(png|jpe?g|webp|gif|svg)$/i.test(href||''); }
+    document.addEventListener("click", async (e) => {
+      const btn = e.target.closest("button[data-copy]");
+      if(!btn) return;
+      const path = btn.getAttribute("data-copy");
+      const url = fullUrl(path);
 
-      function showIframe(src){
-        mImgWrap.style.display = 'none';
-        mFrame.style.display   = 'block';
-        mFrame.src = src;
+      try{
+        await navigator.clipboard.writeText(url);
+        const old = btn.textContent;
+        btn.textContent = "Copied";
+        setTimeout(()=>btn.textContent = old, 900);
+      }catch(err){
+        // fallback: prompt
+        window.prompt("Copy this URL:", url);
       }
-      function showImage(src){
-        mFrame.removeAttribute('src');
-        mFrame.style.display   = 'none';
-        mImgWrap.style.display = 'block';
-        mImg.src = src;
-      }
-
-      function openModal(title, cat, href){
-        mTitle.textContent = title || '';
-        mCat.textContent   = cat ? ('• ' + cat) : '';
-        mOpen.href = href || '#';
-
-        if (isImage(href)){
-          showImage(href);
-        } else {
-          if (location.protocol === 'file:'){
-            window.open(href, '_blank', 'noopener');
-            return;
-          }
-          showIframe(href);
-        }
-
-        modal.hidden = false;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden','false');
-      }
-
-      function closeModal(){
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden','true');
-        modal.hidden = true;
-        mFrame.removeAttribute('src');
-        mImg.removeAttribute('src');
-      }
-
-      safe(function(){
-        document.addEventListener('click', function(e){
-          if(e.target === modal){ closeModal(); return; }
-
-          // Amulet click
-          var am = e.target.closest ? e.target.closest('.amulet') : null;
-          if(am){
-            var fig = am.closest('figure');
-            var a   = fig ? fig.querySelector('a') : null;
-            var href = am.getAttribute('data-href') || (a ? a.getAttribute('href') : '');
-            var title = (a && a.getAttribute('data-title')) || '';
-            var cat = (fig && fig.getAttribute('data-cat')) || '';
-            if(href){ openModal(title, cat, href); }
-            return;
-          }
-
-          // Thumbnail link click => modal (emails = html; THP = images)
-          var link = e.target.closest ? e.target.closest('a') : null;
-          if(link && link.querySelector && link.querySelector('.thumb') && !(e.metaKey||e.ctrlKey)){
-            e.preventDefault();
-            var fig2  = link.closest('figure');
-            var t     = link.getAttribute('data-title') || '';
-            var c     = (fig2 && fig2.getAttribute('data-cat')) || '';
-            var href2 = link.getAttribute('href') || '';
-            if(href2){ openModal(t,c,href2); }
-          }
-        });
-
-        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
-        mClose.addEventListener('click', closeModal);
-      });
-
-      // Tabs
-      var navEmail  = document.getElementById('nav-email');
-      var navWeb    = document.getElementById('nav-web');
-      var emailWrap = document.getElementById('email-sections');
-      var webWrap   = document.getElementById('webbrand-section');
-
-      function setMode(mode){
-        var isEmail = (mode === 'email');
-        emailWrap.hidden = !isEmail;
-        webWrap.hidden   =  isEmail;
-        navEmail.classList.toggle('current', isEmail);
-        navWeb.classList.toggle('current', !isEmail);
-        window.scrollTo(0,0);
-      }
-
-      safe(function(){
-        navEmail.addEventListener('click', function(){ setMode('email'); });
-        navWeb  .addEventListener('click', function(){ setMode('web');   });
-      });
-
-      // init
-      setMode('email');
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Remove leading "Campaign • " if it appears in any subtitle (defensive)
-      document.querySelectorAll('.subtitle').forEach(function(el){
-        el.textContent = el.textContent.replace(/^\s*Campaign\s*•\s*/i, '');
-      });
-    })();
+    });
   </script>
 </body>
 </html>
