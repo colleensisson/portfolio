@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Colleen Sisson — Email Index</title>
-  <meta name="description" content="Email portfolio index by Colleen Sisson."/>
+  <title>Email Design — Colleen Sisson</title>
+  <meta name="description" content="Email portfolio by Colleen Sisson."/>
 
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@600&display=swap" rel="stylesheet"/>
 
   <style>
     :root{
-      --bg:#ffffff; --ink:#151515; --muted:#6f6f6f; --rule:#e8e8e8; --turq:#3fc2c2; --max:980px;
+      --bg:#ffffff; --ink:#151515; --muted:#6f6f6f; --rule:#e8e8e8; --turq:#3fc2c2; --turq-dark:#1a8f8f; --max:980px;
       --fs-xs:13px; --fs-s:15px; --fs-m:18px; --fs-xl:34px;
     }
     *{box-sizing:border-box}
@@ -25,14 +25,18 @@
 
     header{padding:10px 0 22px; border-bottom:1px solid var(--rule)}
     h1{
-      margin:0;
+      margin:0 0 4px;
       font-weight:600;
       letter-spacing:-.2px;
       font-size:var(--fs-xl);
       line-height:1.1;
       font-family:"Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
     }
-    .tagline{margin:10px 0 0; color:var(--muted); font-size:var(--fs-s); max-width:720px}
+    .byline{
+      margin:0;
+      color:var(--muted);
+      font-size:var(--fs-s);
+    }
 
     section{padding:26px 0; border-bottom:1px solid var(--rule)}
     .section-title{
@@ -56,6 +60,12 @@
       box-shadow:0 0 0 4px rgba(63,194,194,.12);
       flex:0 0 auto;
     }
+    .dot-dark{
+      width:8px; height:8px; border-radius:50%;
+      background:var(--turq-dark);
+      box-shadow:0 0 0 4px rgba(26,143,143,.15);
+      flex:0 0 auto;
+    }
     .meta{min-width:0; flex:1 1 auto}
     .title{
       margin:0;
@@ -65,34 +75,17 @@
       line-height:1.2;
       white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
-    .file{
-      margin:2px 0 0;
-      color:var(--muted);
-      font-size:var(--fs-xs);
-      font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
-    }
-    .actions{display:flex; gap:8px; flex:0 0 auto}
-    .btn{
-      font-size:var(--fs-xs);
-      padding:8px 10px;
-      border:1px solid var(--rule);
-      border-radius:10px;
-      background:#fff;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn:hover{border-color:#cfd7d7}
     .open{
-      border-color:var(--ink);
       text-decoration:none;
+    }
+    .open:hover{
+      text-decoration:underline;
     }
 
     footer{
       padding-top:18px;
       color:var(--muted);
       font-size:var(--fs-xs);
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
     }
   </style>
 </head>
@@ -100,24 +93,30 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>Colleen Sisson</h1>
-      <p class="tagline">
-        Email portfolio index — one place with clean HTML links you can share or plug into Framer.
-      </p>
+      <h1>Email Design</h1>
+      <p class="byline">by Colleen</p>
     </header>
 
-    <!-- NEW DROP -->
+    <!-- NEW DROPS -->
     <section>
-      <h2 class="section-title">New Drop</h2>
+      <h2 class="section-title">New Drops</h2>
       <ul class="list">
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
-            <p class="title"><a class="open" href="ocuwave-drop.html" target="_blank" rel="noopener">Meet OcuWave</a></p>
-            <p class="file">ocuwave-drop.html</p>
+            <p class="title"><a class="open" href="hot-cold-packs.html" target="_blank" rel="noopener">Hot / Cold Packs</a></p>
           </div>
-          <div class="actions">
-            <button class="btn" data-copy="ocuwave-drop.html">Copy link</button>
+        </li>
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="magnesium-spray.html" target="_blank" rel="noopener">Magnesium Spray</a></p>
+          </div>
+        </li>
+        <li class="row">
+          <span class="dot"></span>
+          <div class="meta">
+            <p class="title"><a class="open" href="ocuwave-drop.html" target="_blank" rel="noopener">Meet OcuWave</a></p>
           </div>
         </li>
       </ul>
@@ -131,38 +130,25 @@
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="laborday-e1.html" target="_blank" rel="noopener">Less labor for your body</a></p>
-            <p class="file">laborday-e1.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="laborday-e1.html">Copy link</button>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- FATHER’S DAY -->
+    <!-- FATHER'S DAY -->
     <section>
-      <h2 class="section-title">Father’s Day</h2>
+      <h2 class="section-title">Father's Day</h2>
       <ul class="list">
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="fathers-day-e2.html" target="_blank" rel="noopener">Gear that supports the gear</a></p>
-            <p class="file">fathers-day-e2.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="fathers-day-e2.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
-            <p class="title"><a class="open" href="fathers-day-e4.html" target="_blank" rel="noopener">It’s all in the Kit</a></p>
-            <p class="file">fathers-day-e4.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="fathers-day-e4.html">Copy link</button>
+            <p class="title"><a class="open" href="fathers-day-e4.html" target="_blank" rel="noopener">It's all in the Kit</a></p>
           </div>
         </li>
       </ul>
@@ -176,21 +162,12 @@
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="foot-health-e2.html" target="_blank" rel="noopener">Full-foot calm</a></p>
-            <p class="file">foot-health-e2.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="foot-health-e2.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="foot-health-e4.html" target="_blank" rel="noopener">Footnotes</a></p>
-            <p class="file">foot-health-e4.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="foot-health-e4.html">Copy link</button>
           </div>
         </li>
       </ul>
@@ -204,32 +181,18 @@
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="october-reset.html" target="_blank" rel="noopener">October reset</a></p>
-            <p class="file">october-reset.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="october-reset.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="fall-bogo.html" target="_blank" rel="noopener">Fall BOGO</a></p>
-            <p class="file">fall-bogo.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="fall-bogo.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="extra-glo-extra-off.html" target="_blank" rel="noopener">Extra off. Extra glo.</a></p>
-            <p class="file">extra-glo-extra-off.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="extra-glo-extra-off.html">Copy link</button>
           </div>
         </li>
       </ul>
@@ -243,21 +206,12 @@
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="bf-24-wraps.html" target="_blank" rel="noopener">Wraps</a></p>
-            <p class="file">bf-24-wraps.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="bf-24-wraps.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="bf-24-devices.html" target="_blank" rel="noopener">Devices</a></p>
-            <p class="file">bf-24-devices.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="bf-24-devices.html">Copy link</button>
           </div>
         </li>
       </ul>
@@ -271,64 +225,22 @@
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="bf-25-e1.html" target="_blank" rel="noopener">Email 1</a></p>
-            <p class="file">bf-25-e1.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="bf-25-e1.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
           <span class="dot"></span>
           <div class="meta">
             <p class="title"><a class="open" href="bf-25-e4.html" target="_blank" rel="noopener">Email 4</a></p>
-            <p class="file">bf-25-e4.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="bf-25-e4.html">Copy link</button>
           </div>
         </li>
-
         <li class="row">
-          <span class="dot"></span>
+          <span class="dot-dark"></span>
           <div class="meta">
             <p class="title">
               <a class="open" href="1-HiDow%20Promotions%20_%20Relief,%20Recovery%20&amp;%20Wellness%20Tech.html" target="_blank" rel="noopener">
                 Promo page
               </a>
             </p>
-            <p class="file">1-HiDow Promotions _ Relief, Recovery &amp; Wellness Tech.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="1-HiDow%20Promotions%20_%20Relief,%20Recovery%20&amp;%20Wellness%20Tech.html">Copy link</button>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- NEWER EMAILS -->
-    <section>
-      <h2 class="section-title">Newer emails</h2>
-      <ul class="list">
-        <li class="row">
-          <span class="dot"></span>
-          <div class="meta">
-            <p class="title"><a class="open" href="hot-cold-packs.html" target="_blank" rel="noopener">Hot / Cold Packs</a></p>
-            <p class="file">hot-cold-packs.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="hot-cold-packs.html">Copy link</button>
-          </div>
-        </li>
-
-        <li class="row">
-          <span class="dot"></span>
-          <div class="meta">
-            <p class="title"><a class="open" href="magnesium-spray.html" target="_blank" rel="noopener">Magnesium Spray</a></p>
-            <p class="file">magnesium-spray.html</p>
-          </div>
-          <div class="actions">
-            <button class="btn" data-copy="magnesium-spray.html">Copy link</button>
           </div>
         </li>
       </ul>
@@ -336,33 +248,11 @@
 
     <footer>
       <div>© <span id="year"></span> Colleen Sisson</div>
-      <div>These links point to the HTML files in this GitHub Pages repo.</div>
     </footer>
   </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    function fullUrl(path){
-      try { return new URL(path, window.location.href).href; }
-      catch(e){ return path; }
-    }
-
-    document.addEventListener("click", async (e) => {
-      const btn = e.target.closest("button[data-copy]");
-      if(!btn) return;
-      const path = btn.getAttribute("data-copy");
-      const url = fullUrl(path);
-
-      try{
-        await navigator.clipboard.writeText(url);
-        const old = btn.textContent;
-        btn.textContent = "Copied";
-        setTimeout(()=>btn.textContent = old, 900);
-      }catch(err){
-        window.prompt("Copy this URL:", url);
-      }
-    });
   </script>
 </body>
 </html>
